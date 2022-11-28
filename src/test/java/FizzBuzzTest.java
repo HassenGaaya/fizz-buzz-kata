@@ -19,21 +19,10 @@ public class FizzBuzzTest {
                 .isEqualTo("Buzz");
     }
 
-    @Test
-    void returnFizzBuzzForFifteen() {
+    @ParameterizedTest
+    @ValueSource(ints = {15, 30, 45, 60, 90})
+    void returnFizzBuzzForMultipleOfBothThreeAndFive() {
         Assertions.assertThat(new FizzBuzz().transform(15))
-                .isEqualTo("FizzBuzz");
-    }
-
-    @Test
-    void returnFizzBuzzForThirty() {
-        Assertions.assertThat(new FizzBuzz().transform(30))
-                .isEqualTo("FizzBuzz");
-    }
-
-    @Test
-    void returnFizzBuzzForSixty() {
-        Assertions.assertThat(new FizzBuzz().transform(60))
                 .isEqualTo("FizzBuzz");
     }
 }
