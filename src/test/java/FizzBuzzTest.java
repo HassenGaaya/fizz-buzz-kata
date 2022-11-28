@@ -11,4 +11,22 @@ public class FizzBuzzTest {
         Assertions.assertThat(new FizzBuzz().transform(number))
                 .isEqualTo("Fizz");
     }
+
+    @Test
+    void returnBuzzForFive() {
+        Assertions.assertThat(new FizzBuzz().transform(5))
+                .isEqualTo("Buzz");
+    }
+
+    @Test
+    void returnBuzzForTen() {
+        Assertions.assertThat(new FizzBuzz().transform(10))
+                .isEqualTo("Buzz");
+    }
+
+    @Test
+    void returnBuzzForTwenty() {
+        Assertions.assertThat(new FizzBuzz().transform(20))
+                .isEqualTo("Buzz");
+    }
 }
