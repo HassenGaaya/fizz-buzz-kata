@@ -7,26 +7,15 @@ public class FizzBuzzTest {
 
     @ParameterizedTest
     @ValueSource(ints = {3, 6, 9, 12})
-    void returnFizzForThree(int number) {
+    void returnFizzForMultipleOfThree(int number) {
         Assertions.assertThat(new FizzBuzz().transform(number))
                 .isEqualTo("Fizz");
     }
 
-    @Test
-    void returnBuzzForFive() {
+    @ParameterizedTest
+    @ValueSource(ints = {5, 10, 20, 25})
+    void returnBuzzForMultipleOfFive() {
         Assertions.assertThat(new FizzBuzz().transform(5))
-                .isEqualTo("Buzz");
-    }
-
-    @Test
-    void returnBuzzForTen() {
-        Assertions.assertThat(new FizzBuzz().transform(10))
-                .isEqualTo("Buzz");
-    }
-
-    @Test
-    void returnBuzzForTwenty() {
-        Assertions.assertThat(new FizzBuzz().transform(20))
                 .isEqualTo("Buzz");
     }
 }
