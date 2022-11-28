@@ -1,2 +1,7 @@
-package PACKAGE_NAME;public class FizzBuzz {
+public class FizzBuzz {
+    public String transform(int number) {
+        if (number % 3 == 0)
+            return "Fizz";
+        return null;
+    }
 }
