@@ -1,25 +1,14 @@
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 public class FizzBuzzTest {
 
-    @Test
-    void returnFizzForThree() {
-        Assertions.assertThat(new FizzBuzz().transform(3))
+    @ParameterizedTest
+    @ValueSource(ints = {3, 6, 9, 12})
+    void returnFizzForThree(int number) {
+        Assertions.assertThat(new FizzBuzz().transform(number))
                 .isEqualTo("Fizz");
     }
-
-    @Test
-    void returnFizzForSix() {
-        Assertions.assertThat(new FizzBuzz().transform(6))
-                .isEqualTo("Fizz");
-    }
-
-    @Test
-    void returnFizzForNine() {
-        Assertions.assertThat(new FizzBuzz().transform(9))
-                .isEqualTo("Fizz");
-    }
-
-
 }
